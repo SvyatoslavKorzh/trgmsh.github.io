@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="uk"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <title>ДЕРЖАВНИЙ ПОРТАЛ ТОРГМАСЬКОЇ ІМПЕРІЇ | GOV.TRG</title>
+    <style>
+        body {
+            background-color: #d4d0c8;
+            font-family: "Times New Roman", Times, serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        #wrapper {
+            width: 950px;
+            margin: 10px auto;
+            background-color: #ffffff;
+            border: 2px inset #fff;
+            box-shadow: 5px 5px 20px rgba(0,0,0,0.5);
+        }
+
+        header {
+            background: linear-gradient(to right, #000040, #000080, #000040);
+            color: #ffd700;
+            padding: 20px;
+            border-bottom: 4px double #ffd700;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 32px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            text-shadow: 2px 2px #000;
+        }
+
+        .marquee-container {
+            background: #000;
+            color: #0f0;
+            font-family: 'Courier New', monospace;
+            padding: 4px;
+            font-size: 13px;
+            border-bottom: 1px solid #999;
+        }
+
+        nav {
+            background: #e0e0e0;
+            border-bottom: 2px solid #808080;
+            padding: 8px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .nav-btn {
+            color: #000;
+            text-decoration: none;
+            padding: 6px 12px;
+            border: 2px outset #eee;
+            background: #d4d0c8;
+            margin: 2px;
+            font-size: 12px;
+            font-weight: bold;
+            cursor: pointer;
+            text-transform: uppercase;
+        }
+
+        .nav-btn:hover { background: #e0e0e0; }
+        .nav-btn:active { border: 2px inset #fff; background: #c0c0c0; }
+
+        .main-content {
+            display: table;
+            width: 100%;
+            min-height: 600px;
+        }
+
+        .sidebar {
+            display: table-cell;
+            width: 230px;
+            background: #f0f0f0;
+            vertical-align: top;
+            padding: 15px;
+            border-right: 2px groove #fff;
+        }
+
+        .content {
+            display: table-cell;
+            padding: 25px;
+            vertical-align: top;
+            background-image: url('https://www.transparenttextures.com/patterns/pinstriped-suit.png');
+        }
+
+        .page-section { display: none; }
+        .active-section { display: block; }
+
+        h2 {
+            color: #000080;
+            border-bottom: 3px double #000080;
+            padding-bottom: 5px;
+            font-size: 22px;
+        }
+
+        .currency-box {
+            border: 2px ridge #ffd700;
+            background: #fff;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+
+        .currency-box table { width: 100%; font-size: 13px; }
+        .currency-box th { background: #000080; color: white; padding: 3px; }
+
+        .economic-table {
+            width: 100%;
+            border: 2px solid #000;
+            border-collapse: collapse;
+        }
+
+        .economic-table td { border: 1px solid #000; padding: 10px; background: #fff; }
+
+        .main-photo {
+            width: 100%;
+            border: 5px double #808080;
+            filter: sepia(20%);
+        }
+
+        .doc-box {
+            background: #fff;
+            border: 1px inset #ccc;
+            padding: 15px;
+            font-style: italic;
+            color: #444;
+            margin-top: 10px;
+        }
+
+        footer {
+            background: #808080;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            font-size: 12px;
+            border-top: 2px solid #444;
+        }
+
+        .counter {
+            font-family: 'Courier New', Courier, monospace;
+            background: #000;
+            color: #f00;
+            padding: 2px 5px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<div id="wrapper">
+    <header>
+        <h1>ТОРГМАСЬКА ІМПЕРІЯ</h1>
+        <div>ДМИТРОКРАТІЯ • ПОРЯДОК • ПРОЦВІТАННЯ</div>
+    </header>
+
+    <div class="marquee-container">
+        <marquee>Держзамовлення на FPV-дрони виконано на 105%... Склади Окружної розширено... Міністр економіки Дядько Андрій підтвердив стабільність курсу рупії... Слава Імператору!</marquee>
+    </div>
+
+    <nav>
+        <div class="nav-btn" onclick="showPage(&#39;main&#39;)">Головна</div>
+        <div class="nav-btn" onclick="showPage(&#39;economy&#39;)">Держ. Бюджет</div>
+        <div class="nav-btn" onclick="showPage(&#39;vpk&#39;)">Оборонне замовлення</div>
+        <div class="nav-btn" onclick="showPage(&#39;guide&#39;)">Путівник</div>
+        <div class="nav-btn" onclick="showPage(&#39;admin&#39;)">Апарат</div>
+        <div class="nav-btn" onclick="showPage(&#39;guest&#39;)">Гостьова</div>
+    </nav>
+
+    <div class="main-content">
+        <div class="sidebar">
+            <div class="currency-box">
+                <table>
+                    <tbody><tr><th colspan="2">КУРС ТРП (ОФІЦ.)</th></tr>
+                    <tr><td>1 USD</td><td><b>51.10</b></td></tr>
+                    <tr><td>1 EUR</td><td><b>57.80</b></td></tr>
+                    <tr><td>1 PLN</td><td><b>14.50</b></td></tr>
+                    <tr><td>1 GBP</td><td><b>63.60</b></td></tr>
+                    <tr><td>1 UAH</td><td><b>1.25</b></td></tr>
+                </tbody></table>
+            </div>
+
+            <div style="font-size: 13px; line-height: 1.5; border: 1px solid #999; padding: 10px; background: #eee;">
+                <strong>ДЕРЖ. СТАТИСТИКА:</strong><br>
+                ВВП: $110,000,000<br>
+                Резерви: $40,000,000<br>
+                Населення: ЗАСЕКРЕЧЕНО<br>
+                Столиця: Мікрорайон Торгмаш
+            </div>
+
+            <center style="margin-top: 20px;">
+                <p style="font-size: 11px;">Відвідувач №:</p>
+                <span class="counter">0001488</span>
+            </center>
+        </div>
+
+        <div class="content">
+
+            <section id="main" class="page-section active-section">
+                <h2>Вітання Уряду</h2>
+                <img src="./ДЕРЖАВНИЙ ПОРТАЛ ТОРГМАСЬКОЇ ІМПЕРІЇ _ GOV.TRG_files/Мікрорайон_у_Броварах,_Торгмаш,_18.10.2009.jpg" class="main-photo">
+                <p>Торгмаська Імперія - це не просто точка на карті Броварів. Це суверенне індустріальне об'єднання, що вібрало в себе міць заводів і стратегічне розташування Окружної дороги.</p>
+                <p>Ми будуємо <strong>Дмитрократію</strong> - лад, де кожен гвинтик системи важливий для спільного блага Імперії.</p>
+            </section>
+
+            <section id="economy" class="page-section">
+                <h2>Економічний паспорт</h2>
+                <p>Поточний ВВП Імперії оцінюється в 110 мільйонів доларів США.</p>
+                <table class="economic-table">
+                    <tbody><tr>
+                        <td width="70%"><b>Військово-Промисловий Комплекс</b></td>
+                        <td align="right">44 млн $</td>
+                    </tr>
+                    <tr>
+                        <td><b>Важка промисловість</b></td>
+                        <td align="right">33 млн $</td>
+                    </tr>
+                    <tr>
+                        <td><b>Логістичний хаб (Окружна)</b></td>
+                        <td align="right">22 млн $</td>
+                    </tr>
+                    <tr>
+                        <td><b>Сфера послуг та IT-технології</b></td>
+                        <td align="right">11 млн $</td>
+                    </tr>
+                </tbody></table>
+                <div class="doc-box">
+                    "Наша економіка адаптована до умов повної автономії. Резерви в 40 мільйонів доларів гарантують стабільність курсу ТРГ." - З доповіді Міністра економіки.
+                </div>
+            </section>
+
+            <section id="vpk" class="page-section">
+                <h2>Військово-Оборонний Комплекс</h2>
+                <p>Імперія утримує лідерство у виробництві високотехнологічних засобів захисту та нападу:</p>
+                <ul>
+                    <li><strong>FPV-дивізіон:</strong> Складання та прошивка дронів для потреб безпеки.</li>
+                    <li><strong>Бронепластини:</strong> Модернізація середньої та легкої техніки на базі цехів Торгмашу.</li>
+                    <li><strong>Ремонтна база:</strong> Відновлення вузлів і агрегатів будь-якої складності.</li>
+                </ul>
+                <p align="center"><i>"Сталь Торгмашу - щит Дмитрократії!"</i></p>
+            </section>
+
+            <section id="guide" class="page-section">
+                <h2>Путівник по Імперії</h2>
+                <p>Для гостей і підданих відкриті такі зони:</p>
+                <ol>
+                    <li><strong>Проспект Дмитрократії:</strong> Головна вулиця для парадів і свят.</li>
+                    <li><strong>Логістичний Термінал "Окружна":</strong> Місце, де зустрічаються світові товари.</li>
+                    <li><strong>Ринковий Квартал:</strong> Серце імперської торгівлі та сфери послуг.</li>
+                    <li><strong>Промзона:</strong> Закрита територія заводів (вхід лише за спецперепустками).</li>
+                </ol>
+            </section>
+
+            <section id="admin" class="page-section">
+                <h2>Вище Керівництво</h2>
+                <table class="economic-table">
+                    <tbody><tr><td>Імператор</td><td>Святослав Мудрий</td></tr>
+                    <tr><td>Президент</td><td>Арсеній</td></tr>
+                    <tr><td>Міністр економіки</td><td>Дядько Андрій</td></tr>
+                    <tr><td>В.о. Прем'єр-міністра</td><td>Святослав Мудрий</td></tr>
+                    <tr><td>Головнокомандувач</td><td>Дмитро</td></tr>
+                </tbody></table>
+            </section>
+
+            <section id="guest" class="page-section">
+                <h2>Гостьова книга</h2>
+                <div style="background: #ffffcc; border: 1px solid #ccc; padding: 10px; margin-bottom: 10px;">
+                    <b>Житель вул. Олімпійської:</b> Слава Імперії! Вчора бачив новий конвой з Окружної. Міць!
+                </div>
+                <div style="background: #e7f3ff; border: 1px solid #ccc; padding: 10px; margin-bottom: 10px;">
+                    <b>Проїжджий:</b> Курс ТРГ дуже тішить, обміняв долари в кіоску біля ринку без проблем.
+                </div>
+                <hr>
+                <p>Залишити запис: <input type="text" size="30"> <button>Надіслати</button></p>
+            </section>
+
+        </div>
+    </div>
+
+    <footer>
+        © 2026 ТОРГМАСЬКА ІМПЕРІЯ. Веб-майстер: Департамент Зв'язку.<br>
+        <small>Важливо розуміти, це лише імітація держави.</small>
+    </footer>
+</div>
+
+<script>
+    function showPage(pageId) {
+        var sections = document.getElementsByClassName('page-section');
+        for (var i = 0; i < sections.length; i++) {
+            sections[i].classList.remove('active-section');
+        }
+        document.getElementById(pageId).classList.add('active-section');
+        window.scrollTo(0,0);
+    }
+</script>
+
+
+
+</body></html>
